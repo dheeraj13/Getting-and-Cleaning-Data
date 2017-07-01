@@ -36,4 +36,4 @@ comp_data <- cbind(subject,act,data)
 avg_data<- aggregate(.~Subject + Activities, comp_data,mean)
 avg_data <- avg_data[order(avg_data$Subject,avg_data$Activities),]
 
-write.table(avg_data,"tidy_set.txt")
+write.table(avg_data,"tidy_set.txt",row.names = FALSE)
